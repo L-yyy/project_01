@@ -1,0 +1,129 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人主页</title>
+    <style type="text/css">
+        body {
+            background-image: url(images/lybj6.jpg);
+        }
+        
+        #jnkc {
+            position: absolute;
+            width: 400px;
+            top: 7%;
+            bottom: 60%;
+            left: 43%;
+            right: 23%;
+            font-size: x-large;
+            border: 2px aqua;
+        }
+        
+        .hui {
+            position: absolute;
+            top: 75%;
+            left: 91%;
+            font-size: larger;
+            font-family: cursive;
+        }
+        
+        #img {
+            position: absolute;
+            width: 70%;
+            left: 16%;
+            height: 83%;
+            border: 4px dashed pink;
+        }
+        
+        .bt1 {
+            position: absolute;
+            top: 53%;
+            font-family: cursive;
+        }
+        
+        .bt2 {
+            position: absolute;
+            top: 60%;
+            font-family: cursive;
+        }
+        
+        .tab1 {
+            position: absolute;
+            top: 20%;
+            font-size: large;
+            font-family: cursive;
+            border: 2px dashed red;
+        }
+    </style>
+    <script>
+        function welcome() {
+            window.alert("欢迎进入！！！")
+        }
+    </script>
+
+</head>
+
+<body style="height:2000px;" onload="welcome()">
+    <div id="topAnchor"></div>
+    <a href="#topAnchor" style="position:fixed;right:0;bottom:0" class="hui">回到顶部</a>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="nav">
+        <tr>
+            <td><img src="images/ly学校.jpg" height="100" /></td>
+            <td width="100" align="center"><a href="index.html">个人主页</a></td>
+            <td width="100" align="center"><a href="jieshao.html">个人介绍</a></td>
+            <td width="100" align="center"><a href="xiangce.html">个人相册</a></td>
+            <td width="100" align="center"><a href="liuyan.html">留言板</a></td>
+        </tr>
+    </table>
+
+    <img id="img" src="images/ly风景4.jpg" width="100%">
+    <button class="bt1">点击开始图片轮播</button>
+    <button class="bt2">点击停止图片轮播</button>
+
+    <div id="jnkc">
+    </div>
+    <table class="tab1">
+        <tr>
+            <td>
+                <p>图片设置一秒切换一次</p>
+                <p>点击下面按钮开始切换</p>
+                <p>注意：</p>
+                <p>开始按钮不能连续点击两次</p>
+                <p>暂停后可以重新点击轮播</p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var bt1 = document.querySelector('.bt1')
+        var bt2 = document.querySelector('.bt2')
+
+        var number = 0;
+        var s
+
+        function fun() {
+            number++;
+            if (number > 9) {
+                number = 1;
+            }
+            var img = document.getElementById("img");
+            img.src = "images/ly风景" + number + ".jpg";
+        }
+        bt1.onclick = function() {
+            s = setInterval(fun, 1000)
+        }
+        bt2.onclick = function() {
+            clearInterval(s)
+        }
+
+        setInterval("jnkc.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+    </script>
+
+
+
+
+
+</body>
+
+</html>

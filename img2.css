@@ -1,0 +1,68 @@
+body {
+    background-image: url(images/lybj4.jpg);
+}
+
+.title {
+    font-family: "微软雅黑";
+    font-size: x-large;
+}
+
+.hui {
+    position: absolute;
+    top: 75%;
+    left: 91%;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+
+/* 图片预览区域 */
+
+.box {
+    width: 400px;
+    height: 400px;
+    margin: 100px 0 0 100px;
+}
+
+.content {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.content>img {
+    width: 400px;
+    height: 400px;
+}
+
+.mask {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.big {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 410px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    display: none;
+}
+
+.big>img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
